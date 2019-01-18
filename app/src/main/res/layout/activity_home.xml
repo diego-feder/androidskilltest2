@@ -52,7 +52,9 @@
             android:inputType="textFilter"
             android:maxLength="@integer/maxTextLength"
             android:maxLines="1"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:imeActionId="6"
+            android:imeOptions="actionDone"/>
 
         <ListView
             android:id="@+id/list_view_users"

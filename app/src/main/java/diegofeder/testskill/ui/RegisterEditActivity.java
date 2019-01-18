@@ -89,7 +89,7 @@ public class RegisterEditActivity extends AppCompatActivity {
             SharedPrefsUtil sharedPrefsUtil = new SharedPrefsUtil();
             sharedPrefsUtil.setSignedInUserId(this, dao.findByEmail(user.getEmail()).getId());
             // Skip login, go directly to Home as a new account
-            Intent intent = new Intent(this, HomeActivity.class);
+            Intent intent = new Intent(RegisterEditActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }
