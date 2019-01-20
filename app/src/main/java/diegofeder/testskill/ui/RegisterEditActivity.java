@@ -20,7 +20,7 @@ import diegofeder.testskill.utils.SharedPrefsUtil;
 public class RegisterEditActivity extends AppCompatActivity {
 
     private FormHelper formHelper;
-    UserDAO dao;
+    private UserDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

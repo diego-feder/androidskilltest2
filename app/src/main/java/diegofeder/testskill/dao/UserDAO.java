@@ -8,13 +8,13 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import diegofeder.androidskilltest2a.utils.GuidGenerator;
 import diegofeder.testskill.domain.User;
 import diegofeder.testskill.helper.DatabaseHelper;
+import diegofeder.testskill.utils.GuidGenerator;
 
 public class UserDAO {
 
-    private final String TABLE = "Users";
+    private static final String TABLE = "Users";
 
     private SQLiteDatabase db;
 
@@ -111,6 +111,7 @@ public class UserDAO {
 
             listUser.add(user);
         }
+        c.close();
         return listUser;
     }
 

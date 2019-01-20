@@ -8,14 +8,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
-    private String CREATE_TABLE_USER = "CREATE TABLE IF NOT EXISTS Users (id VARCHAR PRIMARY KEY, email VARCHAR  NOT NULL, name VARCHAR NOT NULL, password VARCHAR NOT NULL );";
-
     public DatabaseHelper(Context context) {
         super(context, "APP_DATABASE", null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        String CREATE_TABLE_USER = "CREATE TABLE IF NOT EXISTS Users (id VARCHAR PRIMARY KEY, email VARCHAR  NOT NULL, name VARCHAR NOT NULL, password VARCHAR NOT NULL );";
         db.execSQL(CREATE_TABLE_USER);
     }
 

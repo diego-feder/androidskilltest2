@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Objects;
 
 import diegofeder.testskill.R;
 import diegofeder.testskill.domain.Album;
@@ -48,7 +49,7 @@ public class AlbumAdapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater li = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = li.inflate(R.layout.item_list_album, parent, false);
+            convertView = Objects.requireNonNull(li).inflate(R.layout.item_list_album, parent, false);
 
             mViewHolderItem = new ViewHolderItem();
             mViewHolderItem.ivThumbnail = convertView.findViewById(R.id.image_view_thumbnail);

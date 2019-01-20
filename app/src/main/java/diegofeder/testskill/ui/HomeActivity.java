@@ -137,16 +137,15 @@ public class HomeActivity extends AppCompatActivity {
 
     private void deleteConfirmation(User user) {
 
-        MaterialDialog mDialog;
         if (sharedPrefsUtil.getSignedInUserId(this).equals(user.getId())) {
-            mDialog = new MaterialDialog.Builder(this)
+            new MaterialDialog.Builder(this)
                     .title("Error Deleting Item")
                     .content("You cannot delete the logged user.")
                     .cancelable(false)
                     .positiveText("OK")
                     .show();
         } else {
-            mDialog = new MaterialDialog.Builder(this)
+            new MaterialDialog.Builder(this)
                     .title("Delete Confirmation")
                     .content("Are you sure you want to delete this user?")
                     .cancelable(false)

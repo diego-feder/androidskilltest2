@@ -19,7 +19,6 @@ import diegofeder.testskill.utils.SharedPrefsUtil;
 public class LoginActivity extends AppCompatActivity {
 
     private SharedPrefsUtil sharedPrefsUtil;
-    private FormHelper formHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         TextView wrongLoginTextView = findViewById(R.id.text_view_wrong_login);
         wrongLoginTextView.setVisibility(View.INVISIBLE);
 
-        formHelper = new FormHelper(this);
+        FormHelper formHelper = new FormHelper(this);
         View focusFaultView = formHelper.validateSignInForm();
 
         if (focusFaultView != null) {

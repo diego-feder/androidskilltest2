@@ -10,10 +10,10 @@ import diegofeder.testskill.domain.User;
 
 public class FormHelper {
 
-    private EditText mLoginView;
-    private EditText mNameView;
-    private EditText mPasswordView;
-    private Activity activity;
+    private final EditText mLoginView;
+    private final EditText mNameView;
+    private final EditText mPasswordView;
+    private final Activity activity;
     private User user;
 
     public FormHelper(Activity activity) {
